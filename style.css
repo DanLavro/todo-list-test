@@ -1,9 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Sora", sans-serif;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: transparent;
+  border: 3px solid black;
+  color: black;
+  padding: 4px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.tasksEditor {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 5px;
+}
+
+.addTaskBtn {
+  background-color: black;
+  color: white;
+  width: 34%;
+}
+
+.addTaskBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+.taskInput {
+  width: 60%;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.task {
+  padding: 5px;
+  border-bottom: 1px solid grey;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.buttons {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
 .status {
-  width: 40px;
-  height: 40px;
-  background-color: red;
+  width: 60px;
+  height: 60px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border: 2px solid red;
+  border-radius: 60px;
+  height: 60px;
+  width: 60px;
 }
 
 .completed {
-  background-color: green;
+  border: green;
 }
