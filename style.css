@@ -92,5 +92,5 @@ ul {
 }
 
 .completed {
-  border: green;
+  border: 2px solid green;
 }
