@@ -11,8 +11,14 @@ function addTask(e) {
   console.log("Task");
   const todo = createElement("li", {
     className: "task",
+  });
+
+  const text = createElement("span", {
+    className: "taskText",
     innerText: taskInput.value,
   });
+
+  todo.append(text);
 
   taskInput.value = "";
 
@@ -21,13 +27,11 @@ function addTask(e) {
   const readyButton = createElement("button", {
     className: "readyBtn",
     innerText: "unready",
-    type: "submit",
   });
 
   const deleteButton = createElement("button", {
     className: "deleteBtn",
     innerText: "delete",
-    type: "submit",
   });
 
   const status = createElement("div", { className: "status" });
@@ -65,7 +69,7 @@ function taskBtns(e) {
         .querySelectorAll(".readyBtn")
         .forEach((btn) => (btn.innerText = "ready"));
 
-      allStatuses.forEach((status) => status.classList.toggle("completed"));
+      allStatuses.forEach((status) => status.classList.add("completed"));
       break;
 
     default:
